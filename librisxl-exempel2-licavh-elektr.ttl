@@ -9,7 +9,8 @@
 @prefix kbrda: <https://id.kb.se/rda/> .
 @base <https://bibliotek.se/> .
 
-</maria-celina-abraham-1981-/reproductive-biotechnologies-in-swedish-male-alpacash/PDF-2016> a bf:Electronic; bf:Monograph;
+#Instance (Electronic)
+</maria-celina-abraham-1981-/reproductive-biotechnologies-in-swedish-male-alpacash/PDF-2016> a bf:Electronic; bf:Monograph, bf:Dissertation;
 bf:instanceOf </maria-celina-abraham-1981/reproductive-biotechnologies-in-swedish-male-alpacash-2016>;
 bf:digitalCharacteristic [a bf:FileType "PDF"];
 bf:content "Text"
@@ -19,7 +20,7 @@ bf:extent "64 s.";
 #Tveksam till begreppet "kbv:InnerPageCount".
 #bf:extent [ rdf:value "63"; bf:unit "page" ]
 #bf:extent [ a bf:Extent "63"; bf:Unit "page" ]?
-bf:title [ a bf:InstanceTitle; bf:mainTitle "Reproductive biotechnologies in Swedish male alpacash" ] ;
+bf:title [ a bf:InstanceTitle; bf:mainTitle "Reproductive biotechnologies in Swedish male alpacas" ] ;
 #"[Elektronisk resurs]"?
 bf:responsibilityStatement "Maria Celina Abraham";
 bf:provisionActivity [a bf:Publication;
@@ -28,18 +29,6 @@ bf:agent [rdfs:label "Uppsala Department of Clinical Sciences, Swedish Universit
 bf:date "2016"]];
 bf:identifiedBy [bf:Isbn "9789157693976"];
 bf:identifiedBy [bf:Urn "urn:nbn:se:slu:epsilon-e-33622"];
-bf:note [a bf:Note ; rdfs:label "Härtill 2 uppsatser"];
-#hör uppsatser till work eller instance?
-relators:pbl </Sveriges-lantbruksuniversitet-Institutionen-för-kliniska vetenskaper>;
-# marc 776 hänvisn till den tryckta - som anmärkning? Länk ska ju fungera via verks-posten. 
-
-</Sveriges-lantbruksuniversitet-Institutionen-för-kliniska vetenskaper> a bf:Organization;
-   owl:sameAs <https://libris.kb.se/999999999#it>;
-
-</maria-celina-abraham-1981/reproductive-biotechnologies-in-swedish-male-alpacash-2016> a bf:Work, bf:Dissertation;
-bf:title [a bf:WorkTitle; bf:mainTitle "Reproductive biotechnologies in Swedish male alpacash" ];
-bf:contributor </maria-celina-abraham-1981>;
-#Här finns ingen roll-kod, kan vi utgå från att det är "aut"? #mainEntity ska in här också.
 bf:dissertation [a bf:Note ;
 rdfs:label "Lic.-avh. Uppsala : Sveriges lantbruksuniv., 2016"];
 #alternativt:
@@ -47,10 +36,56 @@ bf:note [a bf:Note;
 bf:noteType "dissertation";
 rdfs:label "Lic.-avh. Uppsala : Sveriges lantbruksuniv., 2016"];
 #Men, kanske diss-anm snarare hör till instance?
+bf:note [a bf:Note ; rdfs:label "Härtill 2 uppsatser"];
+#hör uppsatser till work eller instance?
+relators:pbl </Sveriges-lantbruksuniversitet-Institutionen-för-kliniska vetenskaper>;
+# marc 776 hänvisn till den tryckta - som anmärkning? Länk ska ju fungera via verks-posten.
+</Sveriges-lantbruksuniversitet-Institutionen-för-kliniska vetenskaper> a bf:Organization;
+   owl:sameAs <https://libris.kb.se/999999999#it>;
+
+#Instance (Print)
+</maria-celina-abraham-1981-/reproductive-biotechnologies-in-swedish-male-alpacash/PDF-2016> a bf:Print; bf:Monograph, bf:Dissertation;
+bf:instanceOf </maria-celina-abraham-1981/reproductive-biotechnologies-in-swedish-male-alpacash-2016>;
+bf:content "Text"
+#marc256 "Text" ? Borde höra till work men är i marc "filspecifik uppgift";
+bf:extent "64 s.";
+#bf:extent [ a kbv:InnerPageCount; rdf:value 64 ];
+#Tveksam till begreppet "kbv:InnerPageCount".
+#bf:extent [ rdf:value "63"; bf:unit "page" ]
+#bf:extent [ a bf:Extent "63"; bf:Unit "page" ]?
+bf:title [ a bf:InstanceTitle; bf:mainTitle "Reproductive biotechnologies in Swedish male alpacas" ] ;
+bf:responsibilityStatement "Maria Celina Abraham";
+bf:provisionActivity [a bf:Publication;
+bf:place [rdfs:label "Uppsala"];
+bf:agent [rdfs:label "Uppsala Department of Clinical Sciences, Swedish University of Agricultural Sciences"];
+bf:date "2016"]];
+bf:identifiedBy [bf:Isbn "9789157693969" ];
+# Felaktigt angivet urn som tillhör e-boken: "urn:nbn:se:slu:epsilon-e-3362";
+bf:dissertation [a bf:Note ;
+rdfs:label "Lic.-avh. Uppsala : Sveriges lantbruksuniv., 2016"];
+#alternativt:
+bf:note [a bf:Note;
+bf:noteType "dissertation";
+rdfs:label "Lic.-avh. Uppsala : Sveriges lantbruksuniv., 2016"];
+#Men, kanske diss-anm snarare hör till instance?
+bf:note [a bf:Note ; rdfs:label "Härtill 2 uppsatser"];
+#hör uppsatser till work eller instance?
+relators:pbl </Sveriges-lantbruksuniversitet-Institutionen-för-kliniska vetenskaper>;
+# marc 776 hänvisn till den elektroniska - som anmärkning? Länk ska ju fungera via verks-posten.
+# I marc-posten har man angett en länk till fulltexten. Vanligt med sammanblandning av instanserna.
+</Sveriges-lantbruksuniversitet-Institutionen-för-kliniska vetenskaper> a bf:Organization;
+   owl:sameAs <https://libris.kb.se/999999999#it>;
+
+#Work
+</maria-celina-abraham-1981/reproductive-biotechnologies-in-swedish-male-alpacash-2016> a bf:Work;
+bf:title [a bf:WorkTitle; bf:mainTitle "Reproductive biotechnologies in Swedish male alpacas" ];
+bf:contributor </maria-celina-abraham-1981>;
+#Här finns ingen roll-kod, kan vi utgå från att det är "aut"? #mainEntity ska in här också.
 bf:content "Text";
 #se anm under instanceOf
-bf:classification...
-bf:topic...
+bf:classification [a bf:Classification "L10"; kbv:inScheme "agrissc" ] #bf:classificationPortion?
+#???
+bf:subject [a bf:Topic "alpacas"; kbv:inScheme "agrovoc"]
 
 </maria-celina-abraham-1981> a bf:Person;
    owl:sameAs <https://libris.kb.se/999999999#it>;
@@ -59,41 +94,78 @@ bf:topic...
    sdo:givenName "Maria Celina" .
 
 
-#marc:
-#000		01614nam a22004577a 4500
-#001		19374780
-#003		SE-LIBR
-#005		20160406081956.0
-#007		cr||||||||||||
-#008		160406s2016 sw |||| om |00| ||eng c
-#020	 	a 9789157693976
-#024	7 	a urn:nbn:se:slu:epsilon-e-33622 urn
-#040	 	a Jslu
-#041	 	a engb spab swe
-#084	 	a L012 agrissc
-#084	 	a L102 agrissc
-#084	 	a L532 agrissc
-#100	1 	a Abraham, Maria Celina,d 1981-
-#245	1 0	a Reproductive biotechnologies in Swedish male alpacash [Elektronisk resurs] /c Maria Celina Abraham
-#256	 	a Text
-#260	 	a Uppsala :b Department of Clinical Sciences, Swedish University of Agricultural Sciences,c 2016
-#300	 	a 64 s.
-#500	 	a Härtill 2 uppsatser
-#502	 	a Lic.-avh. Uppsala : Sveriges lantbruksuniv., 2016
-#538	 	a PDF
-#650	 7	a alpacas2 agrovoc
-#650	 7	a vicunas2 agrovoc
-#650	 7	a bulls2 agrovoc
-#650	 7	a spermatozoa2 agrovoc
-#650	 7	a semen2 agrovoc
-#650	 7	a semen collection2 agrovoc
-#650	 7	a centrifuging2 agrovoc
-#650	 7	a sire evaluation2 agrovoc
-#650	 7	a decision making2 agrovoc
-#650	 7	a laboratory techniques2 agrovoc
-#710	2 	a Sveriges lantbruksuniversitet.b Institutionen för kliniska vetenskaper4 pbl
-#776	0 8	i Även utgiven trycktt Reproductive biotechnologies in Swedish male alpacasw 19374779
-#856	4 0	u http://urn.kb.se/resolve?urn=urn:nbn:se:slu:epsilon-e-3362z Fulltext
-#841	 	5 Jslua x ab 160406|| |||||001||||||000000e 1
-#610	2 4	5 Jslua 7042
-#852	 	5 Jslub Jsluh Internet
+#marc (Electronic):
+000		01614nam a22004577a 4500
+001		19374780
+003		SE-LIBR
+005		20160406081956.0
+007		cr||||||||||||
+008		160406s2016 sw |||| om |00| ||eng c
+020	 	a 9789157693976
+024	7 	a urn:nbn:se:slu:epsilon-e-33622 urn
+040	 	a Jslu
+041	 	a engb spab swe
+084	 	a L012 agrissc
+084	 	a L102 agrissc
+084	 	a L532 agrissc
+100	1 	a Abraham, Maria Celina,d 1981-
+245	1 0	a Reproductive biotechnologies in Swedish male alpacash [Elektronisk resurs] /c Maria Celina Abraham
+256	 	a Text
+260	 	a Uppsala :b Department of Clinical Sciences, Swedish University of Agricultural Sciences,c 2016
+300	 	a 64 s.
+500	 	a Härtill 2 uppsatser
+502	 	a Lic.-avh. Uppsala : Sveriges lantbruksuniv., 2016
+538	 	a PDF
+650	 7	a alpacas2 agrovoc
+650	 7	a vicunas2 agrovoc
+650	 7	a bulls2 agrovoc
+650	 7	a spermatozoa2 agrovoc
+650	 7	a semen2 agrovoc
+650	 7	a semen collection2 agrovoc
+650	 7	a centrifuging2 agrovoc
+650	 7	a sire evaluation2 agrovoc
+650	 7	a decision making2 agrovoc
+650	 7	a laboratory techniques2 agrovoc
+710	2 	a Sveriges lantbruksuniversitet.b Institutionen för kliniska vetenskaper4 pbl
+776	0 8	i Även utgiven trycktt Reproductive biotechnologies in Swedish male alpacasw 19374779
+856	4 0	u http://urn.kb.se/resolve?urn=urn:nbn:se:slu:epsilon-e-3362z Fulltext
+841	 	5 Jslua x ab 160406|| |||||001||||||000000e 1
+610	2 4	5 Jslua 7042
+852	 	5 Jslub Jsluh Internet
+
+#Marc (Print)
+000		01608cam a22004337a 4500
+001		19374779
+003		SE-LIBR
+005		20160406082039.0
+008		160406s2016 sw |||| m |00| ||eng c
+020	 	a 9789157693969
+024	7 	a urn:nbn:se:slu:epsilon-e-33622 urn
+040	 	a Jslu
+041	 	a engb spab swe
+084	 	a L012 agrissc
+084	 	a L102 agrissc
+084	 	a L532 agrissc
+100	1 	a Abraham, Maria Celina,d 1981-
+245	1 0	a Reproductive biotechnologies in Swedish male alpacas /c Maria Celina Abraham
+260	 	a Uppsala :b Department of Clinical Sciences, Swedish University of Agricultural Sciences,c 2016
+300	 	a 64 s.
+500	 	a Härtill 2 uppsatser
+502	 	a Lic.-avh. Uppsala : Sveriges lantbruksuniv., 2016
+650	 7	a alpacas2 agrovoc
+650	 7	a vicunas2 agrovoc
+650	 7	a bulls2 agrovoc
+650	 7	a spermatozoa2 agrovoc
+650	 7	a semen2 agrovoc
+650	 7	a semen collection2 agrovoc
+650	 7	a centrifuging2 agrovoc
+650	 7	a sire evaluation2 agrovoc
+650	 7	a decision making2 agrovoc
+650	 7	a laboratory techniques2 agrovoc
+710	2 	a Sveriges lantbruksuniversitet.b Institutionen för kliniska vetenskaper4 pbl
+776	0 8	i Även utgiven elektronisktt Reproductive biotechnologies in Swedish male alpacasw 19374780
+856	4 1	u http://urn.kb.se/resolve?urn=urn:nbn:se:slu:epsilon-e-3362z Fulltext
+841	 	5 Jaa x ab 1604084u 8 1001uu 0901128e 1
+852	 	5 Jab Jah Hdj 16/33
+841	 	5 Jua x ab 160406|| |||||001||||||000000e 1
+852	 	5 Jub Juh 8 monj 16/361x Ju160406
